@@ -39,28 +39,26 @@ public class Atlas {
 
   public static void main(String[] args) {
 
-    double[][] locations = {
-        {51.937176, 4.480499}, // Rotterdam, The Netherlands
-        {50.851593, 4.355856}, // Brussels, Belgium
-        {27.090462, -44.626175}, // North Atlantic Ocean
-        {1.021461, 35.002645}, // Kitale, Kenya
-        {25.212471, 55.275850}, // Dubai, United Arab Emirates
-        {41.024795, 40.522663}, // Tophane Mh., Rize, Turkey
-        {51.51988, -0.09446}, // Barbican, England
-    };
-
-    for (double[] location : locations) {
-      System.out.println(new Atlas().find(location[0], location[1]));
-      System.out.println("----------------------------------------------");
+    if (args.length < 2 || args.length > 4) {
+      System.err.println("usage: java -jar atlas-0.1.0.jar LAT LNG [maxDistance] [limit]");
+      System.exit(1);
     }
 
-//    List<GeoLocation> locations = new Atlas()
-//        .withMaxDistance(25000)
-//        .withLimit(5)
-//        .findAll(51.937176, 4.480499);
-//
-//    for (GeoLocation location : locations) {
-//      System.out.println(location.name);
-//    }
+    double lat = Double.valueOf(args[0]);
+    double lng = Double.valueOf(args[1]);
+    double maxDistance = args.length >= 3 ? Double.valueOf(args[2]) : DEFAULT_MAX_DISTANCE;
+    int limit = args.length == 4 ? Integer.valueOf(args[3]) : DEFAULT_LIMIT;
+
+    List<GeoLocation> locations = new Atlas()
+        .withMaxDistance(maxDistance)
+        .withLimit(limit)
+        .findAll(lat, lng);
+
+    System.out.printf("Found %s location(s) around (%s,%s) in a radius of %s meters:\n\n",
+        locations.size(), lat, lng, maxDistance);
+
+    for (GeoLocation location : locations) {
+      System.out.printf("%s\n\n", location);
+    }
   }
 }
