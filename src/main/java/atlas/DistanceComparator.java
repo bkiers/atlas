@@ -15,7 +15,7 @@ public class DistanceComparator implements Comparator<City> {
 
   public int compare(City city1, City city2) {
 
-    if (city1.geoNameId == city2.geoNameId) {
+    if (city1.geoNameId > 0 && city1.geoNameId == city2.geoNameId) {
       return 0;
     }
 
