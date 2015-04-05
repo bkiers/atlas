@@ -1,6 +1,7 @@
 ## Atlas
 
-TODO
+Atlas, an offline reverse Geo-coding library written in Java, inspired by 
+[reverse-geocoder](https://github.com/thampiman/reverse-geocoder).
 
 ## using Atlas
 
@@ -29,11 +30,11 @@ and use the library as follows:
 double lat = 45.436636;
 double lng = 12.326413;
 
-// Find a single location
-GeoLocation location = new Atlas().find(lat, lng);
+// Find a single city
+City city = new Atlas().find(lat, lng);
 
-System.out.println(location);
-//    GeoLocation{
+System.out.println(city);
+//    City{
 //      geoNameId=3164603
 //      name='Venice'
 //      latitude=45.43713
@@ -45,15 +46,15 @@ System.out.println(location);
 //    }
 
 // Finds 3 cities around the (lat,lng) in a radius of 5 kilometers
-List<GeoLocation> locations = new Atlas()
+List<City> cities = new Atlas()
     .withLimit(3)
     .withMaxDistance(5000)
     .findAll(lat, lng);
 
-for (GeoLocation loc : locations) {
-  System.out.println(loc);
+for (City c : cities) {
+  System.out.println(c);
 }
-//      GeoLocation{
+//      City{
 //        geoNameId=3164603
 //        name='Venice'
 //        latitude=45.43713
@@ -63,7 +64,7 @@ for (GeoLocation loc : locations) {
 //        admin1='Veneto'
 //        admin2='Provincia di Venezia'
 //      }
-//      GeoLocation{
+//      City{
 //        geoNameId=3175265
 //        name='Giudecca'
 //        latitude=45.42477
@@ -73,7 +74,7 @@ for (GeoLocation loc : locations) {
 //        admin1='Veneto'
 //        admin2='Provincia di Venezia'
 //      }
-//      GeoLocation{
+//      City{
 //        geoNameId=3172456
 //        name='Murano'
 //        latitude=45.45857

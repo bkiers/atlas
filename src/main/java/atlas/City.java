@@ -6,7 +6,7 @@ import java.util.Map;
 
 import static atlas.Utils.*;
 
-public class GeoLocation implements Serializable {
+public class City implements Serializable {
 
   public static final int COLUMNS = 19;
 
@@ -38,11 +38,11 @@ public class GeoLocation implements Serializable {
 
   // Public no-args constructor needed for serialization.
   @SuppressWarnings("unused")
-  public GeoLocation() {
+  public City() {
     this(0.0, 0.0);
   }
 
-  protected GeoLocation(String line, Map<String, String> adminMap) {
+  protected City(String line, Map<String, String> adminMap) {
 
     String[] tokens = line.split(DELIMITER);
 
@@ -65,7 +65,7 @@ public class GeoLocation implements Serializable {
     this.admin2 = adminMap.get(String.format("%s.%s.%s", this.countryCode, admin1Code, admin2Code));
   }
 
-  protected GeoLocation(double latitude, double longitude) {
+  protected City(double latitude, double longitude) {
     this.geoNameId = -1;
     this.name = null;
     this.latitude = latitude;
@@ -76,7 +76,7 @@ public class GeoLocation implements Serializable {
     this.admin2 = null;
   }
 
-  public double distanceTo(GeoLocation that) {
+  public double distanceTo(City that) {
 
     double R = 6371000;
 
@@ -98,7 +98,7 @@ public class GeoLocation implements Serializable {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
 
-    GeoLocation that = (GeoLocation) o;
+    City that = (City) o;
 
     return this.geoNameId == that.geoNameId;
   }
@@ -110,7 +110,7 @@ public class GeoLocation implements Serializable {
 
   @Override
   public String toString() {
-    return "GeoLocation{" +
+    return "City{" +
         "\n geoNameId=" + geoNameId +
         "\n name='" + name + '\'' +
         "\n latitude=" + latitude +

@@ -5,15 +5,15 @@ import java.util.Comparator;
 /**
  * A comparator that sorts locations TODO
  */
-public class DistanceComparator implements Comparator<GeoLocation> {
+public class DistanceComparator implements Comparator<City> {
 
-  private final GeoLocation center;
+  private final City center;
 
-  public DistanceComparator(GeoLocation center) {
+  public DistanceComparator(City center) {
     this.center = center;
   }
 
-  public int compare(GeoLocation location1, GeoLocation location2) {
+  public int compare(City location1, City location2) {
 
     if (location1.geoNameId == location2.geoNameId) {
       return 0;

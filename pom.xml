@@ -44,7 +44,7 @@
         <version>1.2.1</version>
         <configuration>
           <executable>java</executable>
-          <mainClass>atlas.GeoLocationIndex</mainClass>
+          <mainClass>atlas.CityIndex</mainClass>
         </configuration>
       </plugin>
 

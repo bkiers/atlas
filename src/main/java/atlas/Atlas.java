@@ -2,14 +2,14 @@ package atlas;
 
 import java.util.List;
 
-import static atlas.GeoLocationIndex.*;
+import static atlas.CityIndex.*;
 
 public class Atlas {
 
   public static final double DEFAULT_MAX_DISTANCE = 25000.0;
   public static final int DEFAULT_LIMIT = 10;
 
-  private static GeoLocationIndex index = Utils.deserialize(INDEX_FILE_NAME, GeoLocationIndex.class);
+  private static CityIndex index = Utils.deserialize(INDEX_FILE_NAME, CityIndex.class);
 
   private int limit;
   private double maxDistance;
@@ -29,11 +29,11 @@ public class Atlas {
     return this;
   }
 
-  public GeoLocation find(double latitude, double longitude) {
+  public City find(double latitude, double longitude) {
     return index.nearestNeighbour(latitude, longitude, this.maxDistance);
   }
 
-  public List<GeoLocation> findAll(double latitude, double longitude) {
+  public List<City> findAll(double latitude, double longitude) {
     return index.nearestNeighbours(latitude, longitude, this.maxDistance, this.limit);
   }
 
@@ -49,7 +49,7 @@ public class Atlas {
     double maxDistance = args.length >= 3 ? Double.valueOf(args[2]) : DEFAULT_MAX_DISTANCE;
     int limit = args.length == 4 ? Integer.valueOf(args[3]) : DEFAULT_LIMIT;
 
-    List<GeoLocation> locations = new Atlas()
+    List<City> locations = new Atlas()
         .withMaxDistance(maxDistance)
         .withLimit(limit)
         .findAll(lat, lng);
@@ -57,7 +57,7 @@ public class Atlas {
     System.out.printf("Found %s location(s) around (%s,%s) in a radius of %s meters:\n\n",
         locations.size(), lat, lng, maxDistance);
 
-    for (GeoLocation location : locations) {
+    for (City location : locations) {
       System.out.printf("%s\n\n", location);
     }
   }
