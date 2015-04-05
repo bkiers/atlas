@@ -28,30 +28,30 @@ public class CityIndex implements Serializable {
     this(new HashSet<City>());
   }
 
-  protected CityIndex(Set<City> locations) {
+  protected CityIndex(Set<City> cities) {
 
     this.latitudeIndex = new TreeMap<>();
     this.longitudeIndex = new TreeMap<>();
 
-    for (City location : locations) {
-      this.insert(location);
+    for (City city : cities) {
+      this.insert(city);
     }
   }
 
-  protected void insert(City location) {
-    insert(location.latitude, location, this.latitudeIndex);
-    insert(location.longitude, location, this.longitudeIndex);
+  protected void insert(City city) {
+    insert(city.latitude, city, this.latitudeIndex);
+    insert(city.longitude, city, this.longitudeIndex);
   }
 
-  protected void insert(Double key, City location, NavigableMap<Double, Set<City>> index) {
-    Set<City> locations = index.remove(key);
+  protected void insert(Double key, City city, NavigableMap<Double, Set<City>> index) {
+    Set<City> cities = index.remove(key);
 
-    if (locations == null) {
-      locations = new LinkedHashSet<>();
+    if (cities == null) {
+      cities = new LinkedHashSet<>();
     }
 
-    locations.add(location);
-    index.put(key, locations);
+    cities.add(city);
+    index.put(key, cities);
   }
 
   protected City nearestNeighbour(double latitude, double longitude, double maxDistance) {
@@ -89,25 +89,25 @@ public class CityIndex implements Serializable {
         }
       }
 
-      City location = getLocationFrom(entry);
+      City city = getCityFrom(entry);
       City next;
 
       switch (direction) {
         case UP:
-          entry = index.higherEntry(location.latitude);
-          next = new City(getLocationFrom(entry).latitude, center.longitude);
+          entry = index.higherEntry(city.latitude);
+          next = new City(getCityFrom(entry).latitude, center.longitude);
           break;
         case DOWN:
-          entry = index.lowerEntry(location.latitude);
-          next = new City(getLocationFrom(entry).latitude, center.longitude);
+          entry = index.lowerEntry(city.latitude);
+          next = new City(getCityFrom(entry).latitude, center.longitude);
           break;
         case RIGHT:
-          entry = index.higherEntry(location.longitude);
-          next = new City(center.latitude, getLocationFrom(entry).longitude);
+          entry = index.higherEntry(city.longitude);
+          next = new City(center.latitude, getCityFrom(entry).longitude);
           break;
         default:
-          entry = index.lowerEntry(location.longitude);
-          next = new City(center.latitude, getLocationFrom(entry).longitude);
+          entry = index.lowerEntry(city.longitude);
+          next = new City(center.latitude, getCityFrom(entry).longitude);
           break;
       }
 
@@ -117,8 +117,8 @@ public class CityIndex implements Serializable {
     }
   }
 
-  // Utility method that reads a single location from a map-entry.
-  private City getLocationFrom(Map.Entry<Double, Set<City>> entry) {
+  // Utility method that reads a single city from a map-entry.
+  private City getCityFrom(Map.Entry<Double, Set<City>> entry) {
 
     if (entry == null || entry.getValue().isEmpty()) {
       // Should not happen.
@@ -129,14 +129,14 @@ public class CityIndex implements Serializable {
   }
 
   /**
-   * Reads all locations and serializes this index which will be included
+   * Reads all cities and serializes this index which will be included
    * in the JAR file after doing a {@code mvn package}
    *
    * @param args an optional comma separated list of country codes to
    *             include in the index. When no parameter is used, all
-   *             locations will be imported.
+   *             cities will be imported.
    *
-   * @throws FileNotFoundException when the file with geo-locations couldn't
+   * @throws FileNotFoundException when the file with cities couldn't
    * be found: ./{@value #INDEX_FOLDER_NAME}/{@value #CITY_DATA_FILE_NAME}
    */
   public static void main(String[] args) throws FileNotFoundException{
@@ -148,10 +148,10 @@ public class CityIndex implements Serializable {
     }
 
     if (countryCodes.isEmpty()) {
-      System.out.printf("Reading all locations from %s/%s\n", DATA_FOLDER_NAME, ADMIN1_DATA_FILE_NAME);
+      System.out.printf("Reading all cities from %s/%s\n", DATA_FOLDER_NAME, ADMIN1_DATA_FILE_NAME);
     }
     else {
-      System.out.printf("Reading locations with country codes %s from %s/%s\n", countryCodes, DATA_FOLDER_NAME, ADMIN1_DATA_FILE_NAME);
+      System.out.printf("Reading cities with country codes %s from %s/%s\n", countryCodes, DATA_FOLDER_NAME, ADMIN1_DATA_FILE_NAME);
     }
 
     Map<String, String> adminMap = new LinkedHashMap<>();
@@ -160,21 +160,21 @@ public class CityIndex implements Serializable {
     adminMap.putAll(Utils.read(new File(DATA_FOLDER_NAME, ADMIN2_DATA_FILE_NAME), "\t"));
 
     Scanner scanner = new Scanner(new File(DATA_FOLDER_NAME, CITY_DATA_FILE_NAME));
-    Set<City> locations = new LinkedHashSet<>();
+    Set<City> cities = new LinkedHashSet<>();
 
     while (scanner.hasNextLine()) {
 
       String line = scanner.nextLine();
-      City location = new City(line, adminMap);
+      City city = new City(line, adminMap);
 
-      if (countryCodes.isEmpty() || countryCodes.contains(location.countryCode.toUpperCase())) {
-        locations.add(location);
+      if (countryCodes.isEmpty() || countryCodes.contains(city.countryCode.toUpperCase())) {
+        cities.add(city);
       }
     }
 
-    System.out.printf("Finished loading %s locations, writing index to disk...\n", locations.size());
+    System.out.printf("Finished loading %s cities, writing index to disk...\n", cities.size());
 
-    Utils.serialize(new CityIndex(locations), new File(INDEX_FOLDER_NAME, INDEX_FILE_NAME));
+    Utils.serialize(new CityIndex(cities), new File(INDEX_FOLDER_NAME, INDEX_FILE_NAME));
 
     System.out.printf("OK!\nRun `mvn package` to create a JAR file containing the newly created index.\n");
   }

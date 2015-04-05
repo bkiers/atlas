@@ -49,16 +49,16 @@ public class Atlas {
     double maxDistance = args.length >= 3 ? Double.valueOf(args[2]) : DEFAULT_MAX_DISTANCE;
     int limit = args.length == 4 ? Integer.valueOf(args[3]) : DEFAULT_LIMIT;
 
-    List<City> locations = new Atlas()
+    List<City> cities = new Atlas()
         .withMaxDistance(maxDistance)
         .withLimit(limit)
         .findAll(lat, lng);
 
-    System.out.printf("Found %s location(s) around (%s,%s) in a radius of %s meters:\n\n",
-        locations.size(), lat, lng, maxDistance);
+    System.out.printf("Found %s cit(y)(ies) around (%s,%s) in a radius of %s meters:\n\n",
+        cities.size(), lat, lng, maxDistance);
 
-    for (City location : locations) {
-      System.out.printf("%s\n\n", location);
+    for (City city : cities) {
+      System.out.printf("%s\n\n", city);
     }
   }
 }
