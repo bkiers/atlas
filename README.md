@@ -3,6 +3,9 @@
 Atlas, an offline reverse Geo-coding library written in Java, inspired by 
 [reverse-geocoder](https://github.com/thampiman/reverse-geocoder).
 
+The index is a double `SortedMap<Double, Set<City>>` that keeps an index
+on both the latitudes and longitudes of the cities.
+
 ## using Atlas
 
 Clone this repository and add the library to your local Maven repos:
@@ -107,3 +110,12 @@ to create an index of the counties Spain and Portugal, do the following:
 
     mvn -q exec:java -Dexec.args="ES,PT"
     mvn package
+
+## credits
+
+* data from [GeoNames](http://www.geonames.org)
+* *blazing* fast (de)serialization using [Kryo](https://github.com/EsotericSoftware/kryo)
+
+## license
+
+[MIT](http://opensource.org/licenses/MIT)

@@ -76,6 +76,13 @@ public class City implements Serializable {
     this.admin2 = null;
   }
 
+  /**
+   * Returns the absolute distance (as the crow flies) between 2 cities.
+   *
+   * @param that the other city.
+   *
+   * @return the absolute distance (as the crow flies) between 2 cities.
+   */
   public double distanceTo(City that) {
 
     double R = 6371000;
