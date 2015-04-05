@@ -1,13 +1,9 @@
 package atlas; 
 
 import org.junit.Test; 
-import org.junit.Before; 
-import org.junit.After; 
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
-
-import static atlas.DistanceComparator.*;
 
 public class DistanceComparatorTest { 
 
