@@ -102,7 +102,7 @@ To create a new index containing all cities, simply run:
     mvn -q exec:java
     mvn package
     
-which will create a JAR file, `original-atlas-VERSION.jar`, inside the `./target` folder
+which will create a JAR file, `atlas-VERSION.jar`, inside the `./target` folder
 of approximately 5.6 Megabytes containing the entire index of all cities. 
 
 If you don't need all cities, you can create a smaller index. For example, if you want
