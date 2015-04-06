@@ -1,4 +1,4 @@
-## Atlas
+## Atlas  &nbsp; [![Build Status](https://travis-ci.org/bkiers/atlas.png)](https://travis-ci.org/bkiers/atlas)
 
 Atlas, an offline reverse Geo-coding library written in Java, inspired by 
 [reverse-geocoder](https://github.com/thampiman/reverse-geocoder).
