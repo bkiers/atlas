@@ -22,12 +22,6 @@ public class DistanceComparator implements Comparator<City> {
     double distance1 = center.distanceTo(city1);
     double distance2 = center.distanceTo(city2);
 
-    if (distance1 < distance2) {
-      return -1;
-    }
-    if (distance1 > distance2) {
-      return 1;
-    }
-    return 0;
+    return Double.compare(distance1, distance2);
   }
 }

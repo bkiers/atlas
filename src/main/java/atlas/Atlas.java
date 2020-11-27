@@ -2,7 +2,7 @@ package atlas;
 
 import java.util.List;
 
-import static atlas.CityIndex.*;
+import static atlas.CityIndex.INDEX_FILE_NAME;
 
 public class Atlas {
 
