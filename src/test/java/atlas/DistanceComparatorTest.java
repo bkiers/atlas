@@ -1,14 +1,14 @@
-package atlas; 
+package atlas;
 
-import org.junit.Test; 
+import org.junit.Test;
 
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
 
-public class DistanceComparatorTest { 
+public class DistanceComparatorTest {
 
   @Test
-  public void testCompare() throws Exception { 
+  public void testCompare() {
 
     final City rotterdam = new City(51.933900, 4.472554);
     final City amsterdam = new City(52.375186, 4.897244);

@@ -4,37 +4,59 @@ import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Map;
 
-import static atlas.Utils.*;
+import static atlas.Utils.toDouble;
+import static atlas.Utils.toInt;
 
 public class City implements Serializable {
 
   public static final int COLUMNS = 19;
 
-  public static final String DELIMITER= "\t";
+  public static final String DELIMITER = "\t";
 
-  /** integer id of record in geonames database */
+  /**
+   * integer id of record in geonames database
+   */
   public final int geoNameId;
 
-  /** name of geographical point (utf8) varchar(200) */
+  /**
+   * name of geographical point (utf8) varchar(200)
+   */
   public final String name;
 
-  /** latitude in decimal degrees (wgs84) */
+  /**
+   * latitude in decimal degrees (wgs84)
+   */
   public final double latitude;
 
-  /** longitude in decimal degrees (wgs84) */
+  /**
+   * longitude in decimal degrees (wgs84)
+   */
   public final double longitude;
 
-  /** ISO-3166 2-letter country code, 2 characters */
+  /**
+   * ISO-3166 2-letter country code, 2 characters
+   */
   public final String countryCode;
 
-  /** the timezone id (see file timeZone.txt) varchar(40) */
+  /**
+   * the timezone id (see file timeZone.txt) varchar(40)
+   */
   public final String timeZone;
 
-  /** name for administrative subdivision 1 */
+  /**
+   * name for administrative subdivision 1
+   */
   public final String admin1;
 
-  /** name for administrative subdivision 2 */
+  /**
+   * name for administrative subdivision 2
+   */
   public final String admin2;
+
+  /**
+   * code for administrative subdivision 3
+   */
+  public final String admin3Code;
 
   // Public no-args constructor needed for serialization.
   @SuppressWarnings("unused")
@@ -61,8 +83,11 @@ public class City implements Serializable {
     String admin1Code = tokens[10];
     String admin2Code = tokens[11];
 
+
     this.admin1 = adminMap.get(String.format("%s.%s", this.countryCode, admin1Code));
     this.admin2 = adminMap.get(String.format("%s.%s.%s", this.countryCode, admin1Code, admin2Code));
+
+    this.admin3Code = tokens[12];
   }
 
   protected City(double latitude, double longitude) {
@@ -74,13 +99,13 @@ public class City implements Serializable {
     this.timeZone = null;
     this.admin1 = null;
     this.admin2 = null;
+    this.admin3Code = null;
   }
 
   /**
    * Returns the absolute distance (as the crow flies) between 2 cities.
    *
    * @param that the other city.
-   *
    * @return the absolute distance (as the crow flies) between 2 cities.
    */
   public double distanceTo(City that) {
@@ -102,8 +127,12 @@ public class City implements Serializable {
 
   @Override
   public boolean equals(Object o) {
-    if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
 
     City that = (City) o;
 
@@ -118,14 +147,15 @@ public class City implements Serializable {
   @Override
   public String toString() {
     return "City{" +
-        "\n geoNameId=" + geoNameId +
-        "\n name='" + name + '\'' +
-        "\n latitude=" + latitude +
-        "\n longitude=" + longitude +
-        "\n countryCode='" + countryCode + '\'' +
-        "\n timeZone='" + timeZone + '\'' +
-        "\n admin1='" + admin1 + '\'' +
-        "\n admin2='" + admin2 + '\'' +
-        "\n}";
+        "geoNameId=" + geoNameId +
+        ", name='" + name + '\'' +
+        ", latitude=" + latitude +
+        ", longitude=" + longitude +
+        ", countryCode='" + countryCode + '\'' +
+        ", timeZone='" + timeZone + '\'' +
+        ", admin1='" + admin1 + '\'' +
+        ", admin2='" + admin2 + '\'' +
+        ", admin3Code='" + admin3Code + '\'' +
+        '}';
   }
 }

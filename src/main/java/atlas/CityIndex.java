@@ -3,7 +3,19 @@ package atlas;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.Serializable;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.NavigableMap;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeMap;
+import java.util.TreeSet;
 
 public class CityIndex implements Serializable {
 
@@ -133,13 +145,12 @@ public class CityIndex implements Serializable {
    * in the JAR file after doing a {@code mvn package}
    *
    * @param args an optional comma separated list of country codes to
-   *             include in the index. When no parameter is used, all
-   *             cities will be imported.
-   *
+   * include in the index. When no parameter is used, all
+   * cities will be imported.
    * @throws FileNotFoundException when the file with cities couldn't
    * be found: ./{@value #INDEX_FOLDER_NAME}/{@value #CITY_DATA_FILE_NAME}
    */
-  public static void main(String[] args) throws FileNotFoundException{
+  public static void main(String[] args) throws FileNotFoundException {
 
     Set<String> countryCodes = new HashSet<>();
 
@@ -149,8 +160,7 @@ public class CityIndex implements Serializable {
 
     if (countryCodes.isEmpty()) {
       System.out.printf("Reading all cities from %s/%s\n", DATA_FOLDER_NAME, ADMIN1_DATA_FILE_NAME);
-    }
-    else {
+    } else {
       System.out.printf("Reading cities with country codes %s from %s/%s\n", countryCodes, DATA_FOLDER_NAME, ADMIN1_DATA_FILE_NAME);
     }
 

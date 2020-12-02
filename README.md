@@ -22,7 +22,7 @@ Add the following dependency to your project:
 <dependency>
   <groupId>nl.big-o</groupId>
   <artifactId>atlas</artifactId>
-  <version>0.1.0</version>
+  <version>0.2.0</version>
 </dependency>
 ```
 
@@ -91,11 +91,13 @@ for (City c : cities) {
 
 ## (re) creating the index
 
-In order to recreate the index, download the [`cities1000.zip`](http://download.geonames.org/export/dump/cities1000.zip) 
+In order to recreate the index, download the [`cities1000.zip`](https://download.geonames.org/export/dump/cities1000.zip) 
 and unzip it in this project's `./data` folder. Optionally also copy the files:
-[`admin1CodesASCII.txt`](http://download.geonames.org/export/dump/admin1CodesASCII.txt) and
-[`admin2Codes.txt`](http://download.geonames.org/export/dump/admin1CodesASCII.txt) to
-the `./data` folder.
+[`admin1CodesASCII.txt`](https://download.geonames.org/export/dump/admin1CodesASCII.txt) and
+[`admin2Codes.txt`](https://download.geonames.org/export/dump/admin2Codes.txt)
+to the `./data` folder.
+
+You can also run `update.sh` in the `./data` folder, which downloads these files via `curl`.
 
 To create a new index containing all cities, simply run:
 
@@ -113,9 +115,9 @@ to create an index of the counties Spain and Portugal, do the following:
 
 ## credits
 
-* data from [GeoNames](http://www.geonames.org)
+* data from [GeoNames](https://www.geonames.org)
 * *blazing* fast (de)serialization using [Kryo](https://github.com/EsotericSoftware/kryo)
 
 ## license
 
-[MIT](http://opensource.org/licenses/MIT)
+[MIT](https://opensource.org/licenses/MIT)
