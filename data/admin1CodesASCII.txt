@@ -459,7 +459,7 @@ BY.03	Grodnenskaya	Grodnenskaya	628035
 BY.02	Gomel Oblast	Gomel Oblast	628281
 BY.01	Brest	Brest	629631
 BZ.06	Toledo	Toledo	3580913
-BZ.05	Stann Creek	Stann Creek	3580975
+BZ.05	Southern District	Southern District	3580975
 BZ.04	Orange Walk	Orange Walk	3581511
 BZ.03	Corozal	Corozal	3582302
 BZ.02	Cayo	Cayo	3582429
@@ -670,7 +670,7 @@ CO.36	Boyacá	Boyaca	3688536
 CO.35	Bolívar	Bolivar	3688650
 CO.34	Bogota D.C.	Bogota D.C.	3688685
 CO.04	Atlántico	Atlantico	3689436
-CO.03	Arauca	Arauca	3689717
+CO.03	Departamento de Arauca	Departamento de Arauca	3689717
 CO.02	Antioquia	Antioquia	3689815
 CO.01	Amazonas	Amazonas	3689982
 CR.08	San José	San Jose	3621837
@@ -855,6 +855,16 @@ DZ.01	Algiers	Algiers	2507475
 DZ.36	Aïn Témouchent	Ain Temouchent	2507899
 DZ.35	Aïn Defla	Ain Defla	2508226
 DZ.34	Adrar	Adrar	2508807
+DZ.BB	Bordj Badji Mokhtar	Bordj Badji Mokhtar	12226383
+DZ.TM	Timimoun	Timimoun	12226384
+DZ.BA	Beni Abbes	Beni Abbes	12226385
+DZ.IG	In Guezzam	In Guezzam	12226386
+DZ.IS	In Salah	In Salah	12226387
+DZ.DJ	Djanet	Djanet	12226388
+DZ.EM	El Menia	El Menia	12226389
+DZ.TG	Touggourt	Touggourt	12226390
+DZ.MG	El Mghair	El Mghair	12226391
+DZ.OD	Ouled Djellal	Ouled Djellal	12226392
 EC.20	Zamora-Chinchipe	Zamora-Chinchipe	3649953
 EC.19	Tungurahua	Tungurahua	3650445
 EC.18	Pichincha	Pichincha	3653224
@@ -1024,7 +1034,7 @@ GD.02	Saint David	Saint David	3579932
 GD.01	Saint Andrew	Saint Andrew	3579938
 GD.10	Carriacou and Petite Martinique	Carriacou and Petite Martinique	7303836
 GE.51	T'bilisi	T'bilisi	611716
-GE.04	Ajaria	Ajaria	615929
+GE.04	Achara	Achara	615929
 GE.68	Kvemo Kartli	Kvemo Kartli	865536
 GE.67	Kakheti	Kakheti	865537
 GE.65	Guria	Guria	865538
@@ -1090,6 +1100,7 @@ GQ.06	Centro Sur	Centro Sur	2566980
 GQ.07	Kié-Ntem	Kie-Ntem	2566981
 GQ.08	Litoral	Litoral	2566982
 GQ.09	Wele-Nzas	Wele-Nzas	2566983
+GQ.10	Djibloho	Djibloho	12168385
 GR.736572	Mount Athos	Mount Athos	736572
 GR.ESYE31	Attica	Attica	6692632
 GR.ESYE24	Central Greece	Central Greece	6697800
@@ -1374,13 +1385,14 @@ IQ.17	An Najaf	An Najaf	98862
 IQ.04	Al Qādisīyah	Al Qadisiyah	99022
 IQ.03	Al Muthanná	Al Muthanna	99032
 IQ.01	Al Anbar	Al Anbar	99592
-IR.26	Tehrān	Tehran	110791
+IQ.19	Halabja Governorate	Halabja Governorate	12218240
+IR.26	Tehran	Tehran	110791
 IR.36	Zanjan	Zanjan	111452
 IR.40	Yazd	Yazd	111821
 IR.25	Semnan	Semnan	116401
 IR.35	Māzandarān	Mazandaran	124544
 IR.34	Markazi	Markazi	124763
-IR.23	Lorestān	Lorestan	125605
+IR.23	Lorestan Province	Lorestan Province	125605
 IR.16	Kordestān	Kordestan	126584
 IR.05	Kohgiluyeh and Boyer-Ahmad	Kohgiluyeh and Boyer-Ahmad	126878
 IR.15	Khuzestan	Khuzestan	127082
@@ -1401,10 +1413,10 @@ IR.37	Golestan	Golestan	443792
 IR.38	Qazvīn	Qazvin	443793
 IR.39	Qom	Qom	443794
 IR.04	Sistan and Baluchestan	Sistan and Baluchestan	1159456
-IR.41	Khorāsān-e Jonūbī	Khorasan-e Jonubi	6201374
+IR.41	South Khorasan Province	South Khorasan Province	6201374
 IR.42	Razavi Khorasan	Razavi Khorasan	6201375
 IR.43	North Khorasan	North Khorasan	6201376
-IR.44	Alborz	Alborz	7648907
+IR.44	Alborz Province	Alborz Province	7648907
 IS.41	Northwest	Northwest	3337403
 IS.40	Northeast	Northeast	3337404
 IS.38	East	East	3337405
@@ -1427,7 +1439,7 @@ IT.11	Molise	Molise	3173222
 IT.10	The Marches	The Marches	3174004
 IT.09	Lombardy	Lombardy	3174618
 IT.08	Liguria	Liguria	3174725
-IT.07	Latium	Latium	3174976
+IT.07	Lazio	Lazio	3174976
 IT.06	Friuli Venezia Giulia	Friuli Venezia Giulia	3176525
 IT.05	Emilia-Romagna	Emilia-Romagna	3177401
 IT.04	Campania	Campania	3181042
@@ -1665,7 +1677,7 @@ KZ.06	Atyraū	Atyrau	609862
 KZ.04	Aqtöbe	Aqtoebe	610688
 KZ.15	East Kazakhstan	East Kazakhstan	1517381
 KZ.03	Aqmola	Aqmola	1518003
-KZ.16	Soltüstik Qazaqstan	Soltustik Qazaqstan	1519367
+KZ.16	North Kazakhstan	North Kazakhstan	1519367
 KZ.11	Pavlodar Region	Pavlodar Region	1520239
 KZ.14	Qyzylorda	Qyzylorda	1521406
 KZ.13	Qostanay	Qostanay	1521671
@@ -1804,101 +1816,25 @@ LV.11	Jelgava	Jelgava	459281
 LV.10	Jēkabpils Municipality	Jekabpils Municipality	459282
 LV.09	Gulbenes novads	Gulbenes novads	459664
 LV.08	Dobeles novads	Dobeles novads	460311
-LV.07	Daugavpils municipality	Daugavpils municipality	460410
 LV.06	Daugavpils	Daugavpils	460414
 LV.05	Cēsu Rajons	Cesu Rajons	460569
 LV.04	Bauskas Rajons	Bauskas Rajons	461112
 LV.03	Balvu Novads	Balvu Novads	461160
 LV.02	Alūksnes Novads	Aluksnes Novads	461525
 LV.01	Aizkraukles novads	Aizkraukles novads	461613
-LV.60	Dundaga	Dundaga	7628298
-LV.40	Alsunga	Alsunga	7628299
-LV.A5	Pāvilostas	Pavilostas	7628300
-LV.99	Nīca	Nica	7628301
-LV.B6	Rucavas	Rucavas	7628302
-LV.65	Grobiņa	Grobina	7628303
-LV.61	Durbe	Durbe	7628304
-LV.37	Aizpute	Aizpute	7628305
-LV.A8	Priekule	Priekule	7628306
-LV.D7	Vaiņode	Vainode	7628307
-LV.C9	Skrunda	Skrunda	7628308
-LV.51	Brocēni	Broceni	7628309
-LV.B4	Rojas	Rojas	7628310
-LV.77	Kandava	Kandava	7628311
-LV.44	Auces	Auces	7628312
-LV.73	Jaunpils	Jaunpils	7628313
-LV.62	Engure	Engure	7628314
-LV.D5	Tērvete	Tervete	7628315
-LV.A3	Ozolnieku	Ozolnieku	7628316
-LV.B9	Rundāles	Rundales	7628317
-LV.45	Babīte	Babite	7628318
 LV.95	Mārupe	Marupe	7628319
 LV.A2	Olaine	Olaine	7628320
-LV.67	Lecava	Lecava	7628321
 LV.80	Ķekava	Kekava	7628322
 LV.C3	Salaspils	Salaspils	7628323
-LV.46	Baldone	Baldone	7628324
-LV.D2	Stopiņi	Stopini	7628325
-LV.53	Carnikava	Carnikava	7628326
 LV.34	Ādaži	Adazi	7628327
-LV.64	Garkalne	Garkalne	7628328
-LV.E4	Vecumnieki	Vecumnieki	7628329
-LV.79	Ķegums	Kegums	7628330
-LV.87	Lielvārde	Lielvarde	7628331
-LV.C8	Skrīveri	Skriveri	7628332
-LV.71	Jaunjelgava	Jaunjelgava	7628333
-LV.98	Nereta	Nereta	7628334
-LV.E6	Viesīte	Viesite	7628335
-LV.C2	Salas	Salas	7628336
-LV.74	Jēkabpils	Jekabpils	7628337
-LV.38	Aknīste	Akniste	7628338
-LV.69	Ilūkste	Ilukste	7628339
-LV.E2	Vārkava	Varkava	7628340
 LV.90	Līvāni	Livani	7628341
 LV.E1	Varakļāni	Varaklani	7628342
-LV.E8	Vilanu	Vilanu	7628343
-LV.B3	Riebiņu	Riebinu	7628344
-LV.35	Aglona	Aglona	7628345
-LV.56	Cibla	Cibla	7628346
-LV.E9	Zilupes	Zilupes	7628347
-LV.E7	Viļaka	Vilaka	7628348
-LV.47	Baltinava	Baltinava	7628349
-LV.57	Dagda	Dagda	7628350
-LV.78	Karsava	Karsava	7628351
-LV.B7	Rugāju	Rugaju	7628352
-LV.55	Cesvaine	Cesvaine	7628353
-LV.91	Lubāna	Lubana	7628354
-LV.85	Krustpils	Krustpils	7628355
-LV.A6	Pļaviņu	Plavinu	7628356
-LV.82	Koknese	Koknese	7628357
-LV.68	Ikšķile	Ikskile	7628358
 LV.B5	Ropažu	Ropazu	7628359
-LV.70	Inčukalns	Incukalns	7628360
-LV.84	Krimulda	Krimulda	7628361
 LV.C7	Sigulda	Sigulda	7628362
-LV.88	Līgatne	Ligatne	7628363
-LV.94	Mālpils	Malpils	7628364
-LV.C6	Sēja	Seja	7628365
 LV.C5	Saulkrastu	Saulkrastu	7628366
-LV.C1	Salacgrīvas	Salacgrivas	7628367
-LV.39	Aloja	Aloja	7628368
-LV.97	Naukšēni	Naukseni	7628369
-LV.B8	Rūjienas	Rujienas	7628370
-LV.96	Mazsalaca	Mazsalaca	7628371
-LV.52	Burtnieki	Burtnieki	7628372
-LV.A4	Pārgaujas	Pargaujas	7628373
-LV.81	Kocēni	Koceni	7628374
-LV.42	Amatas	Amatas	7628375
-LV.A9	Priekuļi	Priekuli	7628376
-LV.B1	Raunas	Raunas	7628377
-LV.D3	Strenči	Strenci	7628378
-LV.50	Beverīna	Beverina	7628379
 LV.D1	Smiltene	Smiltene	7628380
-LV.72	Jaunpiebalga	Jaunpiebalga	7628381
-LV.63	Ērgļi	Ergli	7628382
-LV.E3	Vecpiebalga	Vecpiebalga	7628383
-LV.43	Apes	Apes	7628384
-LV.F1	Mesraga	Mesraga	8299767
+LV.DN	South Kurzeme Municipality	South Kurzeme Municipality	12276857
+LV.AN	Augšdaugava Municipality	Augsdaugava Municipality	12276858
 LY.70	Darnah	Darnah	87204
 LY.69	Banghāzī	Banghazi	88318
 LY.66	Al Marj	Al Marj	88904
@@ -2208,7 +2144,7 @@ MT.05	Birżebbuġa	Birzebbuga	8299704
 MT.06	Bormla	Bormla	8299705
 MT.07	Dingli	Dingli	8299706
 MT.08	Il-Fgura	Il-Fgura	8299707
-MT.09	Il-Furjana	Il-Furjana	8299708
+MT.09	Floriana	Floriana	8299708
 MT.10	Il-Fontana	Il-Fontana	8299709
 MT.11	Għajnsielem	Ghajnsielem	8299710
 MT.12	L-Għarb	L-Gharb	8299711
@@ -2467,9 +2403,9 @@ NO.38	Vestfold og Telemark	Vestfold og Telemark	12110599
 NO.46	Vestland	Vestland	12110600
 NP.1	Province 1	Province 1	12095447
 NP.2	Province 2	Province 2	12095448
-NP.3	Province 3	Province 3	12095449
+NP.3	Bagmati Province	Bagmati Province	12095449
 NP.4	Province 4	Province 4	12095450
-NP.5	Province 5	Province 5	12095451
+NP.5	Lumbini Province	Lumbini Province	12095451
 NP.6	Karnali Pradesh	Karnali Pradesh	12095452
 NP.7	Sudurpashchim Pradesh	Sudurpashchim Pradesh	12095453
 NR.14	Yaren	Yaren	2110418
@@ -2505,11 +2441,11 @@ NZ.F7	Otago	Otago	6612109
 NZ.G3	West Coast	West Coast	6612113
 OM.01	Ad Dakhiliyah	Ad Dakhiliyah	411735
 OM.02	Al Batinah South	Al Batinah South	411736
-OM.03	Al Wusţá	Al Wusta	411737
+OM.03	Al Wusta Governorate	Al Wusta Governorate	411737
 OM.04	Southeastern Governorate	Southeastern Governorate	411738
-OM.09	Az̧ Z̧āhirah	Az Zahirah	411739
+OM.09	Ad Dhahirah	Ad Dhahirah	411739
 OM.06	Muscat	Muscat	411740
-OM.07	Musandam	Musandam	411741
+OM.07	Musandam Governorate	Musandam Governorate	411741
 OM.08	Dhofar	Dhofar	411742
 OM.10	Al Buraimi	Al Buraimi	7110710
 OM.12	Northeastern Governorate	Northeastern Governorate	8394433
@@ -2769,7 +2705,7 @@ RO.40	Vrancea	Vrancea	662447
 RO.39	Vâlcea	Valcea	662892
 RO.38	Vaslui	Vaslui	663116
 RO.37	Tulcea	Tulcea	664517
-RO.36	Timiş	Timis	665091
+RO.36	Timiș	Timis	665091
 RO.35	Teleorman	Teleorman	665283
 RO.34	Suceava	Suceava	665849
 RO.33	Sibiu	Sibiu	667267
@@ -2777,30 +2713,30 @@ RO.32	Satu Mare	Satu Mare	667869
 RO.31	Sălaj	Salaj	668248
 RO.30	Prahova	Prahova	669737
 RO.29	Olt	Olt	671857
-RO.28	Neamţ	Neamt	672460
-RO.27	Mureş	Mures	672628
-RO.26	Mehedinţi	Mehedinti	673612
+RO.28	Neamț	Neamt	672460
+RO.27	Mureș	Mures	672628
+RO.26	Mehedinți	Mehedinti	673612
 RO.25	Maramureş	Maramures	673887
-RO.23	Iaşi	Iasi	675809
-RO.22	Ialomiţa	Ialomita	675848
+RO.23	Iași	Iasi	675809
+RO.22	Ialomița	Ialomita	675848
 RO.21	Hunedoara	Hunedoara	675917
 RO.20	Harghita	Harghita	676309
 RO.19	Gorj	Gorj	676898
 RO.42	Giurgiu	Giurgiu	677104
-RO.18	Galaţi	Galati	677692
+RO.18	Galați	Galati	677692
 RO.17	Dolj	Dolj	679134
-RO.16	Dâmboviţa	Dambovita	679385
+RO.16	Dâmbovița	Dambovita	679385
 RO.15	Covasna	Covasna	680428
 RO.14	Constanța	Constanta	680962
 RO.13	Cluj	Cluj	681291
-RO.12	Caraş-Severin	Caras-Severin	682714
-RO.41	Călăraşi	Calarasi	683016
+RO.12	Caraș-Severin	Caras-Severin	682714
+RO.41	Călărași	Calarasi	683016
 RO.11	Buzău	Buzau	683121
-RO.10	Bucureşti	Bucuresti	683504
-RO.09	Braşov	Brasov	683843
+RO.10	București	Bucuresti	683504
+RO.09	Brașov	Brasov	683843
 RO.08	Brăila	Braila	683901
-RO.07	Botoşani	Botosani	684038
-RO.06	Bistriţa-Năsăud	Bistrita-Nasaud	684647
+RO.07	Botoșani	Botosani	684038
+RO.06	Bistrița-Năsăud	Bistrita-Nasaud	684647
 RO.05	Bihor	Bihor	684878
 RO.04	Bacău	Bacau	685947
 RO.03	Arges	Arges	686192
@@ -2809,7 +2745,7 @@ RO.01	Alba	Alba	686581
 RO.43	Ilfov	Ilfov	865518
 RS.VO	Vojvodina	Vojvodina	784272
 RS.SE	Central Serbia	Central Serbia	785958
-RU.88	Jaroslavl	Jaroslavl	468898
+RU.88	Yaroslavl Oblast	Yaroslavl Oblast	468898
 RU.86	Voronezj	Voronezj	472039
 RU.85	Vologda	Vologda	472454
 RU.84	Volgograd Oblast	Volgograd Oblast	472755
@@ -2820,7 +2756,7 @@ RU.76	Tula	Tula	480508
 RU.73	Tatarstan Republic	Tatarstan Republic	484048
 RU.72	Tambov	Tambov	484638
 RU.70	Stavropol’ Kray	Stavropol' Kray	487839
-RU.69	Smolensk	Smolensk	491684
+RU.69	Smolenskaya Oblast’	Smolenskaya Oblast'	491684
 RU.67	Saratovskaya Oblast	Saratovskaya Oblast	498671
 RU.65	Samara Oblast	Samara Oblast	499068
 RU.62	Ryazan Oblast	Ryazan Oblast	500059
@@ -2928,7 +2864,7 @@ SC.19	Plaisance	Plaisance	241224
 SC.18	Mont Fleuri	Mont Fleuri	241251
 SC.17	Mont Buxton	Mont Buxton	241252
 SC.26	English River	English River	241302
-SC.25	Inner Islands	Inner Islands	241311
+SC.25	La Digue	La Digue	241311
 SC.24	Grand Anse Mahe	Grand Anse Mahe	241330
 SC.14	Grand Anse Praslin	Grand Anse Praslin	241331
 SC.12	Glacis	Glacis	241336
@@ -2946,6 +2882,8 @@ SC.29	Les Mamelles	Les Mamelles	448408
 SC.30	Roche Caiman	Roche Caiman	448409
 SC.28	Au Cap	Au Cap	448410
 SC.11876017	Outer Islands	Outer Islands	11876017
+SC.12200079	Ile Perseverance I	Ile Perseverance I	12200079
+SC.12200080	Ile Perseverance II	Ile Perseverance II	12200080
 SD.43	Northern State	Northern State	378389
 SD.29	Khartoum	Khartoum	379253
 SD.36	Red Sea	Red Sea	408646
@@ -3206,10 +3144,10 @@ SK.03	Košický kraj	Kosicky kraj	865084
 SK.05	Prešovský kraj	Presovsky kraj	865085
 SK.08	Žilinský kraj	Zilinsky kraj	3056506
 SK.01	Banskobystrický kraj	Banskobystricky kraj	3343954
-SK.02	Bratislava	Bratislava	3343955
+SK.02	Bratislavský Kraj	Bratislavsky Kraj	3343955
 SK.04	Nitriansky kraj	Nitriansky kraj	3343956
 SK.06	Trenčiansky kraj	Trenciansky kraj	3343957
-SK.07	Trnavský kraj	Trnavsky kraj	3343958
+SK.07	Trnava	Trnava	3343958
 SL.04	Western Area	Western Area	2403068
 SL.03	Southern Province	Southern Province	2403745
 SL.02	Northern Province	Northern Province	2404798
@@ -3627,17 +3565,17 @@ UA.19	Rivne	Rivne	695592
 UA.18	Poltava Oblast	Poltava Oblast	696634
 UA.17	Odessa	Odessa	698738
 UA.16	Mykolayiv Oblast	Mykolayiv Oblast	700567
-UA.15	Lviv	Lviv	702549
+UA.15	Lviv Oblast	Lviv Oblast	702549
 UA.14	Luhansk	Luhansk	702657
-UA.13	Kyiv	Kyiv	703446
+UA.13	Kiev	Kiev	703446
 UA.12	Kyiv City	Kyiv City	703447
 UA.11	Crimea	Crimea	703883
 UA.10	Kirovohrad Oblast	Kirovohrad Oblast	705811
-UA.09	Khmelnytskyy Oblast	Khmelnytskyy Oblast	706370
+UA.09	Khmelnytskyi Oblast	Khmelnytskyi Oblast	706370
 UA.08	Kherson Oblast	Kherson Oblast	706442
 UA.07	Kharkiv	Kharkiv	706482
 UA.06	Ivano-Frankivsk Oblast	Ivano-Frankivsk Oblast	707470
-UA.05	Donetsk	Donetsk	709716
+UA.05	Donetsk Oblast	Donetsk Oblast	709716
 UA.04	Dnipropetrovsk Oblast	Dnipropetrovsk Oblast	709929
 UA.03	Chernivtsi Oblast	Chernivtsi Oblast	710720
 UA.02	Chernihiv	Chernihiv	710734
@@ -3731,8 +3669,8 @@ UZ.10	Samarqand	Samarqand	1114927
 UZ.08	Qashqadaryo	Qashqadaryo	1114928
 UZ.02	Bukhara	Bukhara	1114929
 UZ.14	Toshkent	Toshkent	1484838
-UZ.13	Toshkent Shahri	Toshkent Shahri	1484839
-UZ.16	Sirdaryo	Sirdaryo	1484840
+UZ.13	Tashkent	Tashkent	1484839
+UZ.16	Sirdaryo Region	Sirdaryo Region	1484840
 UZ.07	Navoiy	Navoiy	1484841
 UZ.06	Namangan	Namangan	1484842
 UZ.05	Xorazm	Xorazm	1484843
