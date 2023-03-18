@@ -22,7 +22,7 @@ Add the following dependency to your project:
 <dependency>
   <groupId>nl.big-o</groupId>
   <artifactId>atlas</artifactId>
-  <version>0.2.0</version>
+  <version>0.2.1</version>
 </dependency>
 ```
 
